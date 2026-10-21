@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MDN Web Page</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img
+                    src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/MDN_Web_Docs_logo.svg/3840px-MDN_Web_Docs_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+                    alt="mdn-logo"></a>
+        </div>
+
+
+        <nav>
+            <a href="" class="toplink">HTML<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" class="toplink">CSS<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" class="toplink">JavaScript<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" class="toplink">Web APIs<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" class="toplink">All<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" id="orange"><i class="fa-solid fa-graduation-cap"></i>Learn<i
+                    class="fa-solid fa-angle-down"></i></a>
+            <a href="" id="purple"><i class="fa-solid fa-wrench"></i>Tools<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" id="green">About<i class="fa-solid fa-angle-down"></i></a>
+            <a href="" class="toplink" id="blog">Blog</a>
+        </nav>
+
+        <div class="btn">
+
+            <button title="Search the site">
+                <span>__</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+        <div class="icon">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- NAVIGATIION START -->
+    <section class="after-header">
+        <nav class="links">
+            <a href="">Web</a><i class="fa-solid fa-angle-right"></i>
+            <a href="">CSS</a><i class="fa-solid fa-angle-right"></i>
+            <a href="">Guides</a><i class="fa-solid fa-angle-right"></i>
+            <a href="">Flexible box layout</a><i class="fa-solid fa-angle-right"></i>
+            <a href="">Basic concepts</a><i class="fa-solid fa-angle-right"></i>
+        </nav>
+        <div class="theme-trans-icon">
+
+            <span class="theme">
+                <i class="fa-solid fa-circle-half-stroke"></i>Theme
+            </span>
+            <span class="trans"><i class="fa-solid fa-language"></i> Engligh(US)</span>
+
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION END -->
+    <!-- HERO SECTION START -->
+
+    <div class="parent">
+
+        <!-- CHILD 1 START -->
+        <div class="child1">
+
+            <div class="filter">
+                <input type="text" name="filter" placeholder="Filter">
+            </div>
+            <nav id="side-top-links">
+                <a href="#">CSS</a>
+                <a href="#">Guides</a>
+            </nav>
+            <nav id="second-links">
+                <a href="#">Flexbox</a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </nav>
+        </div>
+
+        <!-- CHILD 1 END -->
+
+        <!-- MAIN-CONTENT START -->
+        <div class="child2">
+            <h1>Basic concepts of flexbox</h1>
+            <p>The <a href="#">flexible box layout</a> module (usually referred to as flexbox) is a
+                one-dimensional layout model for
+                distributing space between items and includes numerous alignment capabilities. This article gives an
+                outline of the main features of flexbox, which we will explore in more detail in the rest of these
+                guides.</p>
+
+            <p id="para2">When we describe flexbox as being one-dimensional we are describing the fact that flexbox
+                deals with
+                layout in one dimension at a time — either as a row or as a column. This can be contrasted with the
+                two-dimensional model of <a href="#">CSS Grid Layout</a>, which controls columns and rows
+                together.</p>
+
+            <h2 id="two-axes-flex-box">
+                <span>The two axes of flexbox</span>
+            </h2>
+            <p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The
+                <a href="#"> main axis</a> is defined by the <a href="#"><span id="bg-color">flex-direction</span></a>
+                property, and the
+                <a href="#">cross axis</a> runs perpendicular to it.
+                Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from
+                the outset.
+            </p>
+
+            <h3><a href="#main-axes">The main axes</a></h3>
+            <p>The main axis is defined by <span class="gray">flex-direction</span>, which has four possible values:</p>
+
+            <div class="list">
+                <ul>
+                    <li><span>row</span></li>
+                    <li><span>row-reverse</span></li>
+                    <li><span>column</span></li>
+                    <li><span>column-reverse</span></li>
+                </ul>
+            </div>
+            <p class="para3">Should you choose <span class="gray">row</span> or <span class="gray">row-reverse</span>,
+                your main axis will run along the row in the
+                <strong>inline
+                    direction.</strong>
+            </p>
+            <div class="image1">
+                <img src="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis/basics1.png"
+                    alt="Main Axis-flex-direction:row">
+            </div>
+            <p id="padding">Choose <span class="gray">column</span> or <span class="gray">column-reverse</span> and your
+                main axis will run in the <strong> block direction</strong>, from the top of the
+                page to the bottom.</p>
+
+        </div>
+
+        <!-- MAIN CONTENT END -->
+        <!-- ARTICLE START -->
+        <div class="abcd">
+            <button class="btn">menu</button>
+            <div class="child3">
+                <h3>In this article</h3>
+                <nav>
+                    <a href="#two-axes-flex-box">The two axes of flex box</a>
+                    <a href="">Start and end lines</a>
+                    <a href="">The flex container</a>
+                    <a href="" class="lineheight">Multi-line flex containers with flex-wrap</a>
+                    <a href="">The flex-flow shorthand</a>
+                    <a href="" class="lineheight">Properties applied to flex items</a>
+                    <a href="" class="lineheight">Alignment,justification and distribution of free space between
+                        items</a>
+                    <a href="">Next steps</a>
+
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- ARTICLE END -->
+    </div>
+    <!-- HERO SECTION END -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
