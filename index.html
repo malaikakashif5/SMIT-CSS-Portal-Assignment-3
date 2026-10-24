@@ -26,7 +26,6 @@
                     alt="mdn-logo"></a>
         </div>
 
-
         <nav>
             <a href="" class="toplink">HTML<i class="fa-solid fa-angle-down"></i></a>
             <a href="" class="toplink">CSS<i class="fa-solid fa-angle-down"></i></a>
@@ -75,7 +74,6 @@
         </div>
     </section>
 
-
     <!-- NAVIGATION END -->
     <!-- HERO SECTION START -->
 
@@ -91,12 +89,13 @@
                 <a href="#">CSS</a>
                 <a href="#">Guides</a>
             </nav>
+            <div id="linktoper">Flexbox</div>
             <nav id="second-links">
-                <a href="#">Flexbox</a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+
+                <a href="#destinationone">Flexible box layout</a>
+                <a href="#destinationtwo">The main axes</a>
+                <a href="#destinationthree">The cross axes</a>
+                <a href="#destinationfour">Logical properties and values</a>
             </nav>
         </div>
 
@@ -105,7 +104,7 @@
         <!-- MAIN-CONTENT START -->
         <div class="child2">
             <h1>Basic concepts of flexbox</h1>
-            <p>The <a href="#">flexible box layout</a> module (usually referred to as flexbox) is a
+            <p>The <span id="destinationone"> flexible box layout </span> module (usually referred to as flexbox) is a
                 one-dimensional layout model for
                 distributing space between items and includes numerous alignment capabilities. This article gives an
                 outline of the main features of flexbox, which we will explore in more detail in the rest of these
@@ -114,22 +113,24 @@
             <p id="para2">When we describe flexbox as being one-dimensional we are describing the fact that flexbox
                 deals with
                 layout in one dimension at a time — either as a row or as a column. This can be contrasted with the
-                two-dimensional model of <a href="#">CSS Grid Layout</a>, which controls columns and rows
+                two-dimensional model of CSS Grid Layout, which controls columns and rows
                 together.</p>
 
             <h2 id="two-axes-flex-box">
-                <span>The two axes of flexbox</span>
+                The two axes of flexbox
             </h2>
             <p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The
-                <a href="#"> main axis</a> is defined by the <a href="#"><span id="bg-color">flex-direction</span></a>
+                main axis is defined by the <span id="bg-color">flex-direction</span>
                 property, and the
-                <a href="#">cross axis</a> runs perpendicular to it.
+                cross axis runs perpendicular to it.
                 Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from
                 the outset.
             </p>
 
             <h3><a href="#main-axes">The main axes</a></h3>
-            <p>The main axis is defined by <span class="gray">flex-direction</span>, which has four possible values:</p>
+            <p>The <span id="destinationtwo">main axis</span> is defined by <span class="gray">flex-direction</span>,
+                which has four
+                possible values:</p>
 
             <div class="list">
                 <ul>
@@ -139,7 +140,8 @@
                     <li><span>column-reverse</span></li>
                 </ul>
             </div>
-            <p class="para3">Should you choose <span class="gray">row</span> or <span class="gray">row-reverse</span>,
+            <p class="para3">Should you
+                choose <span class="gray">row</span> or <span class="gray">row-reverse</span>,
                 your main axis will run along the row in the
                 <strong>inline
                     direction.</strong>
@@ -152,6 +154,47 @@
                 main axis will run in the <strong> block direction</strong>, from the top of the
                 page to the bottom.</p>
 
+            <div class="image2">
+                <img src="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis/basics2.png"
+                    alt="Main Axis-flex-direction:column">
+            </div>
+            <h3><a href="#cross-axes">The cross axes</a></h3>
+            <p>The <span id="destinationthree">cross axis</span> runs perpendicular to the main axis. Therefore, if your
+                <span class="gray">flex-direction</span>(main axis) is set to <span class="gray">row</span> or <span
+                    class="gray">row-reverse</span> the cross axis runs down
+                the columns.
+            </p>
+            <div class="image3">
+                <img src="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis/basics3.png"
+                    alt="Cross Axis-flex-direction:row">
+            </div>
+            <p id="margin">If your main axis is <span class="gray">column</span> or <span
+                    class="gray">column-reverse</span> then the cross axis runs along the rows.</p>
+            <div class="image4">
+                <img src="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis/basics4.png"
+                    alt="Cross Axis-flex-direction:column">
+            </div>
+            <h2 id="startline">
+                Start and end lines
+            </h2>
+            <p class="para4">Another vital area of understanding is how flexbox makes no assumption about the writing
+                mode of the
+                document. Flexbox doesn't just assume that all lines of text start at the top left of a document and run
+                towards the right-hand side, with new lines appearing one under the other. Rather, it supports all
+                writing modes, like other <span id="destinationfour">logical properties and values</span>.</p>
+
+            <p class="para4">You can read more about the relationship between flexbox and writing modes
+                in a later
+                article; however, the following description should help explain why we do not talk about left and right
+                and top and bottom when we describe the direction that our flex items flow in.</p>
+
+            <p class="para4">If the <span class="gray">flex-direction</span> is <span class="gray">row</span> and I am
+                working in English, then the start edge of the main axis will be on the left, the end edge on the right.
+            </p>
+            <div class="image5">
+                <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts/basics5.svg"
+                    alt="Working in english the start edge is on the  left">
+            </div>
         </div>
 
         <!-- MAIN CONTENT END -->
@@ -162,7 +205,7 @@
                 <h3>In this article</h3>
                 <nav>
                     <a href="#two-axes-flex-box">The two axes of flex box</a>
-                    <a href="">Start and end lines</a>
+                    <a href="#startline">Start and end lines</a>
                     <a href="">The flex container</a>
                     <a href="" class="lineheight">Multi-line flex containers with flex-wrap</a>
                     <a href="">The flex-flow shorthand</a>
@@ -179,14 +222,70 @@
         <!-- ARTICLE END -->
     </div>
     <!-- HERO SECTION END -->
+    <footer>
+        <div class="backgroundcolour">
 
+        </div>
+        <div class="footerlinks">
 
+            <div class="divone">
+                <a href="./index.html"> <img
+                        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/MDN_Web_Docs_logo.svg/3840px-MDN_Web_Docs_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+                        alt="mdn-logo" title="MDN"></a>
+                <p>Your blueprint for a better internet.</p>
+                <div id="icon">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-bluesky"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-mastodon"></i>
+                    <i class="fa-solid fa-rss"></i>
 
+                </div>
+            </div>
+            <div class="divtwo">
+                <p class="heading">MDN</p>
+                <a href="">About</a>
+                <a href="">Blog</a>
+                <a href="">Mozilla careers<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">Advertise with us<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">MDN Plus</a>
+                <a href="">Product help<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="divthree">
+                <p class="heading">Contribute</p>
+                <a href="">MDN Community</a>
+                <a href="">Community resources</a>
+                <a href="">Writing guidelines</a>
+                <a href="">MDN Discord<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">MDN on GitHub<i class="fa-solid fa-up-right-from-square"></i></a>
 
+            </div>
+            <div class="divfour">
+                <p class="heading">Developers</p>
+                <a href="">Web technologies</a>
+                <a href="">Learn web development</a>
+                <a href="">Guides</a>
+                <a href="">Tutorials</a>
+                <a href="">Glossary</a>
+                <a href="">Hacks blog<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="lastmozilla">
 
-
-
-
+            <div class="mozilla">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn3sDiNQO4I42_5PfMh0kaqk4d6wQOTmo5vS260RNt1sf-jzBSBKSqCopA&s=10"
+                    alt="Mozilla-logo">
+            </div>
+            <div class="linkmozilla">
+                <a href="">Website Privacy Notice<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">Telemetry Settings<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">Legal<i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="">Community Participation Guidelines<i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <p>Portions of this content are ©1998–2026 by individual mozilla.org contributors. Content available under
+                <a href="">a Creative Commons license</a>.</p>
+        </div>
+    </footer>
 
 </body>
 
