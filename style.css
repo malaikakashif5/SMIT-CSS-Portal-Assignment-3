@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -36,13 +36,61 @@ header nav {
     display: flex;
     justify-content: center;
     gap: 25px;
+    position: relative;
 }
-
 nav a {
     text-decoration: none;
     color: rgb(65, 62, 62);
     cursor: pointer;
 }
+/* BOX HOVER */
+.boxhover {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    width: 800px;
+    height: 300px;
+    display: none;
+
+}
+
+.boxstart {
+    display: flex;
+    margin: 30px 15px;
+    gap: 130px;
+}
+
+.boxhover p a {
+    font-size: large;
+    color: rgb(15, 139, 216);
+
+}
+
+.boxhover > p {
+    background-color: lightcyan;
+    padding: 20px 15px;
+
+}
+.boxstart p{
+    color: gray;
+    font-size: 14px;
+}
+.boxstart a{
+    display: flex;
+    margin: 15px 0;
+    color: black;
+}
+.boxthirdlink{
+    border-left: 1px solid lightgray;
+     padding-left: 20px;
+}
+.boxstart a:hover{
+    text-decoration: underline;
+}
+.htmlbox:hover .boxhover{
+    display: block;
+}
+/* BOX HOVER END */
 
 .toplink:hover {
     color: rgb(15, 139, 216);
@@ -67,8 +115,6 @@ nav a {
     background-color: rgb(158, 237, 188);
     transition: 0.3 ease;
 }
-
-
 #blog {
     text-decoration: underline;
 }
@@ -162,10 +208,8 @@ nav a {
     width: 250px;
     height: inherit;
     flex-shrink: 0;
-
-
 }
-
+/* FILTER */
 .child1 input {
     height: 35px;
     width: 210px;
@@ -235,7 +279,6 @@ nav a {
     font-weight: 400;
     width: 800px;
 }
-
 
 #destinationone,
 #destinationtwo,
@@ -314,8 +357,6 @@ p.para3 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-
-
 }
 
 .image2 img {
@@ -487,6 +528,7 @@ footer {
     text-decoration: underline;
     font-size: 16px;
 }
+
 .linkmozilla+p {
     color: gray;
     font-size: 16px;
